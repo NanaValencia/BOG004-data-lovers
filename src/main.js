@@ -1,6 +1,26 @@
 import { example } from './data.js';
-// import data from './data/lol/lol.js';
-import data from './data/pokemon/pokemon.js';
-// import data from './data/rickandmorty/rickandmorty.js';
+import data from './data/rickandmorty/rickandmorty.js';
 
-console.log(example, data);
+let personajes = [];
+fetch('./data/rickandmorty/rickandmorty.json')
+.then(choice => choice.json())
+.then(data => personajes =data.results)
+.then(() => traerPersonje(personajes))
+.catch(error => {
+    throw(error);
+})
+
+function listaPersonajes(personajes){
+    let btnPersonajes = document.getElementById("btnPersonajes")
+    btnPersonajes.onclick = listaPersonajes()  
+   //const listaPersonajes = document.getElementById('portalPersonajes');
+     
+}
+
+
+
+
+
+//cómo recorrer un arreglo
+    //mostrar uno a uno los elementos del arrreglo en consola
+    //imprimir en la sección de personajes cada uno de mis elementos 

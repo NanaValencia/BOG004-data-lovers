@@ -1,0 +1,10 @@
+.fondo {
+    background-image: url(./img/svg/fondo1\ 2.svg);
+}
+#redes {
+    background-color: grey;
+    border-radius: 4px;
+    display: inline-block;
+    position: -webkit-sticky;
+    top: 0px; left: 1120px;
+}
