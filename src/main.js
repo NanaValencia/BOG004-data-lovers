@@ -1,21 +1,52 @@
-import { example } from './data.js';
 import data from './data/rickandmorty/rickandmorty.js';
+import {filter} from './data.js';
+console.log (data)
 
-let personajes = [];
-fetch('./data/rickandmorty/rickandmorty.json')
-.then(choice => choice.json())
-.then(data => personajes =data.results)
-.then(() => traerPersonje(personajes))
-.catch(error => {
-    throw(error);
-})
+export let personajes = document.getElementById("portalPersonajes");
 
-function listaPersonajes(personajes){
-    let btnPersonajes = document.getElementById("btnPersonajes")
-    btnPersonajes.onclick = listaPersonajes()  
-   //const listaPersonajes = document.getElementById('portalPersonajes');
-     
+
+
+
+//Elementos
+let characters = document.getElementById("btnPersonajes")
+
+//Funciones
+function btnPersonajes() {
+    document.getElementById("home").style.display = "block";
+    document.getElementById ("pantallaPersonajes").style.display = "none";
 }
+
+//Eventos
+characters.addEventListener("click",btnPersonajes)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// let personajes = [];
+// fetch('./data/rickandmorty/rickandmorty.json')
+// .then(choice => choice.json())
+// .then(data => personajes =data.results)
+// .then(() => traerPersonje(personajes))
+// .catch(error => {
+//     throw(error);
+// })
+
+// function listaPersonajes(personajes){
+//     let btnPersonajes = document.getElementById("btnPersonajes")
+// //     btnPersonajes.onclick = listaPersonajes()  
+//    //const listaPersonajes = document.getElementById('portalPersonajes');
+     
+// }
 
 
 
