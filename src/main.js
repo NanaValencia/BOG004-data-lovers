@@ -1,8 +1,30 @@
 import data from './data/rickandmorty/rickandmorty.js';
 import {filter} from './data.js';
-console.log (data)
 
-export let personajes = document.getElementById("portalPersonajes");
+let dataResults = data.results
+let contenedorPersonajes = document.getElementById("contenedorPersonajes");
+
+function listarPersonajes (data) {
+let grupoPersonajes = "";
+dataResults.forEach(element => {
+    let personaje = `
+        <div class="cardsPpal">
+            <section class="fotoPersonaje">
+                <img src="${element.image}"/>
+            </section>
+            <section class="datos">
+                <h3>${element.name}</h3>
+                <h5>${element.status}</h5>
+                <h5>Última vez visto en: ${element.origin.name}</h5>
+                <h5>Lugar de origen: ${element.location.name}</h5>
+            </section>
+        </div>
+    `
+    grupoPersonajes = grupoPersonajes + personaje
+});
+contenedorPersonajes.innerHTML = grupoPersonajes
+}
+listarPersonajes(dataResults)
 
 
 

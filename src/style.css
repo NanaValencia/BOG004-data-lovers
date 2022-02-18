@@ -1,18 +1,15 @@
-* {
+body {
     background-image: url(./img/svg/fondo1\ 2.svg);
     background-size: 100%;
+    margin: 0;
+    padding: 0;
 }
-#redes {
-    background-color: grey;
-    border-radius: 4px;
-    display: inline-block;
-    text-align: center;
-    margin-left: 95%;
-}
+
 #logo {
     display: block;
     margin: auto;
 }
+
 #titulo {
     text-align: center;
     font-style: normal;
@@ -20,11 +17,44 @@
     font-size: 50px;
     color: aliceblue;
 }
+
 #slogan {
     display: block;
     margin: auto;
 }
+.row {
+    display: flex;
+    justify-content: center;
+    flex-flow: row;
+    align-content: center;
+    padding: 1%;
+    margin: 2%;
+}
 
+a {
+    cursor: pointer;
+}
+
+.cardsPpal {
+    background-color: grey;
+    display: flex;
+    padding: 1%;
+    margin: 1%;
+    width: 40%;
+    height: 40%;
+    border-radius: 5%;
+}
+
+#redes {
+    background-color: grey;
+    border-radius: 4px;
+    display: inline-block;
+    text-align: center;
+    margin-left: 95%;
+}
+
+
+/* 5px 5px 10px -3px #00000040, */
 /* #verPersonajes {
     display: inline-block;
     text-align: left;
