@@ -1,43 +1,43 @@
 import data from './data/rickandmorty/rickandmorty.js';
-import {filter} from './data.js';
+// import {filter} from './data.js';
 
 let dataResults = data.results
 let contenedorPersonajes = document.getElementById("contenedorPersonajes");
 
-function listarPersonajes (data) {
-let grupoPersonajes = "";
-dataResults.forEach(element => {
-    let personaje = `
-        <div class="cardsPpal">
-            <section class="fotoPersonaje">
-                <img src="${element.image}"/>
-            </section>
-            <section class="datos">
-                <h3>${element.name}</h3>
-                <h5>${element.status}</h5>
-                <h5>Última vez visto en: ${element.origin.name}</h5>
-                <h5>Lugar de origen: ${element.location.name}</h5>
-            </section>
-        </div>
-    `
-    grupoPersonajes = grupoPersonajes + personaje
-});
-contenedorPersonajes.innerHTML = grupoPersonajes
-}
-listarPersonajes(dataResults)
-
-
-
-
 //Elementos
-let characters = document.getElementById("btnPersonajes")
+let characters = document.getElementById("btnPersonajes") 
+document.getElementById("pantallaPersonajes").style.display = "none";
 
 //Funciones
 function btnPersonajes() {
-    document.getElementById("home").style.display = "block";
-    document.getElementById ("pantallaPersonajes").style.display = "none";
+    document.getElementById("home").style.display = "none";
+    document.getElementById ("pantallaPersonajes").style.display = "block";
 }
 
+function listarPersonajes (data) {
+    let grupoPersonajes = "";
+    dataResults.forEach(element => {
+        let personaje = `
+        <div class="cardPpal">
+            <div class="cards">
+                <section class="fotoPersonaje">
+                    <img src="${element.image}"/>
+                </section>
+                <section class="datos">
+                    <h3>${element.name}</h3>
+                    <h5>${element.status}</h5>
+                    <h5>Última vez visto en: ${element.origin.name}</h5>
+                    <h5>Lugar de origen: ${element.location.name}</h5>
+                </section>
+            </div>
+        </div>    
+        `
+        grupoPersonajes = grupoPersonajes + personaje
+    });
+    contenedorPersonajes.innerHTML = grupoPersonajes
+    }
+    listarPersonajes(dataResults)
+    
 //Eventos
 characters.addEventListener("click",btnPersonajes)
 

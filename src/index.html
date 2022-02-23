@@ -3,11 +3,12 @@
 
 <head>
   <meta charset="utf-8">
-  <title>Data Lovers RM</title>
+  <title>FanClub Rick and Morty</title>
   <link rel="stylesheet" href="style.css" />
 </head>
 
 <body>
+<!-- Pantalla Principal -->
   <div id="home">
     <header>
       <img src="./img/svg/logo.svg" id="logo" alt="logo RM">
@@ -15,6 +16,8 @@
     <main>
       <h1 id="titulo">¡Tenemos una nueva aventura!</h1>
       <img src="./img/svg/wubba dubalub.svg" id="slogan" alt="wubba luba dub dub">
+
+<!--Portales de ingreso a otras pantallas-->
       <div class="row">
         <section id="portalPersonajes">
           <img src="./img/svg/rick-and-morty 1.svg" id="verPersonajes" alt="RM 2">
@@ -31,16 +34,21 @@
           </div>
         </section>
       </div>
-      <div id="contenedorPersonajes">
-      </div>
-  </div>
-  <div id="pantallaPersonajes">
-    <section>
-      <a id="btnHome"><img src="./img/svg/portal.svg" alt="portal"></a>
-      <h1>Personajes de la serie</h1>
-    </section>
   </div>
 
+<!--Historia de usuario Personajes-->
+  <div id="pantallaPersonajes">
+    <section>
+      <img src="./img/svg/logo.svg" id="logo" alt="logo RM">
+      <a id="btnHome"><img src="./img/svg/portal.svg" alt="portal"></a>
+      <h1 id="tituloPersonajes">Personajes de la serie</h1>
+    </section>
+    <section id="contenedorPersonajes">
+    </section>
+    <a id="btnStart"><img src="./img/svg/portal.svg" alt="inicio"></a>
+  </div>
+
+  <!--Acceso Redes sociales RM-->
   <section id="redes">
     <img src="./img/svg/youtube.svg" alt="youtube"><br>
     <img src="./img/svg/iglogo.svg" alt="instagram"><br>
@@ -48,6 +56,7 @@
     <img src="./img/svg/fblogo.svg" alt="facebook">
   </section>
 
+  <!--Enlace con archivo JS-->
   <div id="root"></div>
   <script src="main.js" type="module"></script>
   </main>
