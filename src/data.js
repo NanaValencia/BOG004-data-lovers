@@ -8,10 +8,9 @@
 //   return 'OMG';
 // };
 function filtrar(){
-
 }
 export const filterPersonajes = (data) => {
   let resultadoFiltro = data.filter(filtrar)
-   
+  
   console.log(resultadoFiltro)
 }

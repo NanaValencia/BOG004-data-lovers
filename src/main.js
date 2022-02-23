@@ -8,10 +8,18 @@ let contenedorPersonajes = document.getElementById("contenedorPersonajes");
 let characters = document.getElementById("btnPersonajes") 
 document.getElementById("pantallaPersonajes").style.display = "none";
 
+let startHome = document.getElementById("btnHome") 
+document.getElementById("home").style.display = "none";
+
 //Funciones
 function btnPersonajes() {
     document.getElementById("home").style.display = "none";
     document.getElementById ("pantallaPersonajes").style.display = "block";
+}
+
+function btnHome() {
+    document.getElementById("pantallaPersonajes").style.display = "none";
+    document.getElementById ("home").style.display = "block";
 }
 
 function listarPersonajes (data) {
@@ -38,10 +46,11 @@ function listarPersonajes (data) {
     }
     listarPersonajes(dataResults)
     
+ 
 //Eventos
 characters.addEventListener("click",btnPersonajes)
 
-
+startHome.addEventListener("click",btnHome)
 
 
 
