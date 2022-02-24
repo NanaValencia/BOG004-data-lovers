@@ -1,16 +1,9 @@
-// estas funciones son de ejemplo
-
-// export const filter = () => {
-//   return 'filter';
-// };
-
-// export const anotherExample = () => {
-//   return 'OMG';
-// };
-function filtrar(){
+function filtrar() {
+    filterPersonajes => (filterPersonajes.length > 20)
+    resultadoFiltro.addEventListener("click", btnFilterPersonajes);
 }
 export const filterPersonajes = (data) => {
-  let resultadoFiltro = data.filter(filtrar)
-  
-  console.log(resultadoFiltro)
+    let resultadoFiltro = data.filter(filtrar)
+
+    console.log(resultadoFiltro)
 }
