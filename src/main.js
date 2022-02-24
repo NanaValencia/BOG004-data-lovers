@@ -4,25 +4,7 @@ import data from './data/rickandmorty/rickandmorty.js';
 let dataResults = data.results
 let contenedorPersonajes = document.getElementById("contenedorPersonajes");
 
-//Elementos
-let characters = document.getElementById("btnPersonajes") 
-document.getElementById("pantallaPersonajes").style.display = "none";
-
-let startHome = document.getElementById("btnHome") 
-document.getElementById("home").style.display = "none";
-
-//Funciones
-function btnPersonajes() {
-    document.getElementById("home").style.display = "none";
-    document.getElementById ("pantallaPersonajes").style.display = "block";
-}
-
-function btnHome() {
-    document.getElementById("pantallaPersonajes").style.display = "none";
-    document.getElementById ("home").style.display = "block";
-}
-
-function listarPersonajes (data) {
+function listarPersonajes() {
     let grupoPersonajes = "";
     dataResults.forEach(element => {
         let personaje = `
@@ -43,14 +25,33 @@ function listarPersonajes (data) {
         grupoPersonajes = grupoPersonajes + personaje
     });
     contenedorPersonajes.innerHTML = grupoPersonajes
-    }
-    listarPersonajes(dataResults)
-    
- 
-//Eventos
-characters.addEventListener("click",btnPersonajes)
+}
+listarPersonajes(dataResults);
 
-startHome.addEventListener("click",btnHome)
+
+//Elementos
+let characters = document.getElementById("btnPersonajes")
+document.getElementsById("pantallaPersonajes").style.display = "none";
+
+let startHome = document.getElementById("btnHome")
+document.getElementById("home").style.display = "none";
+
+
+//Funciones
+function btnPersonajes() {
+    document.getElementById("home").style.display = "none";
+    document.getElementsById("pantallaPersonajes").style.display = "block";
+}
+
+function btnHome() {
+    document.getElementsById("pantallaPersonajes").style.display = "none";
+    document.getElementById("home").style.display = "block";
+}
+
+//Eventos
+characters.addEventListener("click", btnPersonajes);
+
+startHome.addEventListener("click", btnHome);
 
 
 
@@ -76,7 +77,7 @@ startHome.addEventListener("click",btnHome)
 //     let btnPersonajes = document.getElementById("btnPersonajes")
 // //     btnPersonajes.onclick = listaPersonajes()  
 //    //const listaPersonajes = document.getElementById('portalPersonajes');
-     
+
 // }
 
 
@@ -84,5 +85,5 @@ startHome.addEventListener("click",btnHome)
 
 
 //cómo recorrer un arreglo
-    //mostrar uno a uno los elementos del arrreglo en consola
-    //imprimir en la sección de personajes cada uno de mis elementos 
+//mostrar uno a uno los elementos del arrreglo en consola
+//imprimir en la sección de personajes cada uno de mis elementos
