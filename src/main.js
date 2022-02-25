@@ -43,12 +43,8 @@ function listarPersonajes (data) {
         grupoPersonajes = grupoPersonajes + personaje
     });
     contenedorPersonajes.innerHTML = grupoPersonajes
-    }
-    listarPersonajes(dataResults)
-    
- 
-//Eventos
-characters.addEventListener("click",btnPersonajes)
+}
+listarPersonajes(dataResults);
 
 // startHome.addEventListener("click",btnHome)
 
@@ -76,7 +72,7 @@ characters.addEventListener("click",btnPersonajes)
 //     let btnPersonajes = document.getElementById("btnPersonajes")
 // //     btnPersonajes.onclick = listaPersonajes()  
 //    //const listaPersonajes = document.getElementById('portalPersonajes');
-     
+
 // }
 
 
@@ -84,5 +80,5 @@ characters.addEventListener("click",btnPersonajes)
 
 
 //cómo recorrer un arreglo
-    //mostrar uno a uno los elementos del arrreglo en consola
-    //imprimir en la sección de personajes cada uno de mis elementos 
+//mostrar uno a uno los elementos del arrreglo en consola
+//imprimir en la sección de personajes cada uno de mis elementos
