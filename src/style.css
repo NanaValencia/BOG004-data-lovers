@@ -21,6 +21,7 @@ body {
 
 #titulo {
     text-align: center;
+    padding-top: 4%;
     font-style: normal;
     font-family: Arial, Helvetica, sans-serif;
     font-size: 200%;
@@ -31,6 +32,7 @@ body {
     width: 50%;
     display: block;
     margin: auto;
+    padding: 2%;
     text-align: center;
     font-style: normal;
     font-family: Arial, Helvetica, sans-serif;
@@ -83,6 +85,15 @@ a {
     color: aliceblue
 }
 
+#tituloBotonDubDub {
+    text-align: center;
+    padding: 1%;
+    font-style: normal;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 80%;
+    color: aliceblue
+}
+
 #ligaNeflix {
     display: block;
     margin: auto;
@@ -105,6 +116,7 @@ a {
 
 .cards {
     background-color: grey;
+    width: 60%;
     padding: 1em;
     margin: 2%;
     border-radius: 2%;
@@ -114,7 +126,8 @@ a {
 }
 
 .fotoPersonaje img {
-    margin: auto;
+    margin: 5%;
+    width: 100%;
 }
 
 .datos {
@@ -133,7 +146,7 @@ a {
 footer {
     background-color: grey;
     width: 100%;
-    display: flex;
+    display: block;
     margin: auto;
     padding: 0.5%;
     text-align: center;
@@ -150,9 +163,10 @@ footer {
         flex-flow: row;
     }
     #contenedorPersonajes {
-        display: flex;
-        flex-direction: column;
-        flex-wrap: wrap;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        justify-content: center;
+        align-items: center;
     }
     .cards {
         display: flex;
