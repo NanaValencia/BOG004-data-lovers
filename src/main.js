@@ -8,8 +8,8 @@ let contenedorPersonajes = document.getElementById("contenedorPersonajes");
 let characters = document.getElementById("btnPersonajes") 
 document.getElementById("pantallaPersonajes").style.display = "none";
 
-let startHome = document.getElementById("btnHome") 
-document.getElementById("home").style.display = "none";
+// let startHome = document.getElementById("btnHome") 
+// document.getElementById("home").style.display = "none";
 
 //Funciones
 function btnPersonajes() {
@@ -17,10 +17,10 @@ function btnPersonajes() {
     document.getElementById ("pantallaPersonajes").style.display = "block";
 }
 
-function btnHome() {
-    document.getElementById("pantallaPersonajes").style.display = "none";
-    document.getElementById ("home").style.display = "block";
-}
+// function btnHome() {
+//     document.getElementById("pantallaPersonajes").style.display = "none";
+//     document.getElementById ("home").style.display = "block";
+// }
 
 function listarPersonajes (data) {
     let grupoPersonajes = "";
@@ -50,7 +50,7 @@ function listarPersonajes (data) {
 //Eventos
 characters.addEventListener("click",btnPersonajes)
 
-startHome.addEventListener("click",btnHome)
+// startHome.addEventListener("click",btnHome)
 
 
 
