@@ -2,7 +2,7 @@ export const data = () => {
     return 'data';
 };
 
-export const filterPersonajes = () => {
-    const estado = filterPersonajes.filter(t => t.results.status = "Alive");
+export const filterPersonajes = (arrayPersonajes, palabraClave) => {
+    const estado = arrayPersonajes.filter(personaje => personaje.status === palabraClave);
     return estado;
 };

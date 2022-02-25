@@ -1,27 +1,8 @@
 import { filterPersonajes } from './data.js';
 import data from './data/rickandmorty/rickandmorty.js';
 
-
 let dataResults = data.results
 let contenedorPersonajes = document.getElementById("contenedorPersonajes");
-
-//Elementos
-let characters = document.getElementById("btnPersonajes")
-document.getElementById("pantallaPersonajes").style.display = "none";
-
-// let startHome = document.getElementById("btnHome") 
-// document.getElementById("home").style.display = "none";
-
-//Funciones
-function btnPersonajes() {
-    document.getElementById("home").style.display = "none";
-    document.getElementById("pantallaPersonajes").style.display = "block";
-}
-
-// function btnHome() {
-//     document.getElementById("pantallaPersonajes").style.display = "none";
-//     document.getElementById ("home").style.display = "block";
-// }
 
 function listarPersonajes(data) {
     let grupoPersonajes = "";
@@ -44,7 +25,6 @@ function listarPersonajes(data) {
     contenedorPersonajes.innerHTML = grupoPersonajes
 }
 listarPersonajes(dataResults);
-
 
 //Elementos
 // let characters = document.getElementById("btnPersonajes")
@@ -70,4 +50,6 @@ listarPersonajes(dataResults);
 
 // startHome.addEventListener("click", btnHome);
 
-console.log(filterPersonajes, data);
+console.log(filterPersonajes(data.results, "Alive"));
+console.log(filterPersonajes(data.results, "Dead"));
+console.log(filterPersonajes(data.results, "unknown"));
