@@ -5,7 +5,6 @@ body {
     padding: 0%;
 }
 
-
 /* Encabezado */
 
 .logo {
@@ -13,11 +12,7 @@ body {
     margin: auto;
 }
 
-#contenedorLiga {
-    display: block;
-    margin: auto;
-    padding: 2%;
-}
+
 
 #titulo {
     text-align: center;
@@ -47,7 +42,9 @@ a {
 
 /* Contenedor Home */
 
-.pantallaHome {
+#pantallaHome {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
     padding: 1%;
     margin: 1%;
 }
@@ -85,20 +82,21 @@ a {
     color: aliceblue
 }
 
-#tituloBotonDubDub {
+#contenedorLiga {
+    display: block;
     text-align: center;
     padding: 1%;
     font-style: normal;
     font-family: Arial, Helvetica, sans-serif;
     font-size: 80%;
-    color: aliceblue
+    color: aliceblue;
 }
 
 #ligaNeflix {
-    display: block;
+    display: flex;
     margin: auto;
+    justify-content: center;
 }
-
 
 /* Historia de usuario personajes */
 
@@ -151,7 +149,7 @@ footer {
     padding: 0.5%;
     text-align: center;
     font-style: normal;
-    font-family: Arial, Helvetica, sans-serif;git
+    font-family: Arial, Helvetica, sans-serif;
     font-size: 100%;
     color: rgb(5, 5, 5)
 }

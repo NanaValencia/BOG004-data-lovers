@@ -26,29 +26,23 @@ function listarPersonajes(data) {
 }
 listarPersonajes(dataResults);
 
-//Elementos
-// let characters = document.getElementById("btnPersonajes")
-// document.getElementsByClassName("pantallaPersonajes").style.display = "none";
+//Boton ir a personajes
 
-// let startHome = document.getElementById("btnHome")
-// document.getElementById("home").style.display = "none";
+let characters = document.getElementById("btnPersonajes")
+let regresarHome = document.getElementById("btnHome")
 
+function btnPersonajes() {
+    document.getElementById("pantallaPersonajes").style.display = "block";
+    document.getElementById("home").style.display = "none";
+}
 
-//Funciones
-// function btnPersonajes() {
-//     document.getElementById("home").style.display = "none";
-//     document.getElementsByClassName("pantallaPersonajes").style.display = "block";
-// }
+function btnHome() {
+    document.getElementById("home").style.display = "block";
+    document.getElementById("pantallaPersonajes").style.display = "none";
+}
 
-// function btnHome() {
-//     document.getElementsByClassName("pantallaPersonajes").style.display = "none";
-//     document.getElementById("home").style.display = "block";
-// }
-
-//Eventos
-// characters.addEventListener("click", btnPersonajes);
-
-// startHome.addEventListener("click", btnHome);
+characters.addEventListener("click", btnPersonajes);
+regresarHome.addEventListener("click", btnHome);
 
 console.log(filterPersonajes(data.results, "Alive"));
 console.log(filterPersonajes(data.results, "Dead"));
