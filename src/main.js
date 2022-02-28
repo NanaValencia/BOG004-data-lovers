@@ -1,5 +1,6 @@
-import { filterPersonajes } from './data.js';
+import { filterPersonajes, ordenamientoData } from './data.js';
 import data from './data/rickandmorty/rickandmorty.js';
+
 
 let dataResults = data.results
 let contenedorPersonajes = document.getElementById("contenedorPersonajes");
@@ -47,3 +48,25 @@ regresarHome.addEventListener("click", btnHome);
 console.log(filterPersonajes(data.results, "Alive"));
 console.log(filterPersonajes(data.results, "Dead"));
 console.log(filterPersonajes(data.results, "unknown"));
+
+//Función filtro
+
+function filtroPersonajes() {
+    let valorLista = document.getElementById("listaDeSeleccion").value;
+    const personajesFiltrados = filterPersonajes(arrayPersonajes, valorLista);
+    listarPersonajes(personajesFiltrados);
+}
+
+let botonBuscar = document.querySelector('#listaDeSeleccion');
+
+botonBuscar.addEventListener('change', (event) => {
+    const resultado = document.querySelector('#resultado');
+});
+filtroPersonajes;
+
+// const selectElement = document.querySelector('.nieve');
+
+// selectElement.addEventListener('change', (event) => {
+//     const resultado = document.querySelector('.resultado');
+//     resultado.textContent = `Te gusta el sabor ${event.target.value}`;
+// });

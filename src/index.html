@@ -64,11 +64,14 @@
                     <a id="btnHome"><img src="./img/svg/portal.svg" alt="portal" /></a>
                     <h1 id="tituloPersonajes">Personajes de la serie</h1>
                 </section>
-                <select name="status" id="listaDeSeleccion">
-                    <option value="Alive">Vivos</option>
-                    <option value="Dead">Muertos</option>
-                    <option value="unknown">Desconocidos</option>
-                </select>
+                <label>Filtra personajes por estatus
+                    <select name="status" id="listaDeSeleccion">
+                        <option id="vivo" value="Alive" onclick="listaVivos">Vivos</option>
+                        <option id="muerto" value="Dead" onclick="listaMuertos">Muertos</option>
+                        <option id="desconocido" value="unknown" onclick="listaDesconocidos">Desconocidos</option>
+                    </select>
+                </label>
+                <div id="resultado"></div>
                 <section id="contenedorPersonajes">
                     <a id="inicioPersonajes"><img src="./img/svg/portal.svg" alt="inicio" /></a>
                 </section>
