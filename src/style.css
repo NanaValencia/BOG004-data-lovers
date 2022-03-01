@@ -5,14 +5,17 @@ body {
     padding: 0%;
 }
 
+#pantallaInicio {
+    display: none;
+}
+
+
 /* Encabezado */
 
 .logo {
     display: block;
     margin: auto;
 }
-
-
 
 #titulo {
     text-align: center;
@@ -97,6 +100,7 @@ a {
     margin: auto;
     justify-content: center;
 }
+
 
 /* Historia de usuario personajes */
 

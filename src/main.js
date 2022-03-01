@@ -28,26 +28,45 @@ function listarPersonajes(data) {
 listarPersonajes(dataResults);
 
 // Console.log de filter (data.js)
-console.log(filterPersonajes(data.results, "Alive"));
-console.log(filterPersonajes(data.results, "Dead"));
-console.log(filterPersonajes(data.results, "unknown"));
+// console.log(filterPersonajes(data.results, "Alive"));
+// console.log(filterPersonajes(data.results, "Dead"));
+// console.log(filterPersonajes(data.results, "unknown"));
 
 //Función para capturar evento filter
 function filtrarPersonajes() {
     let seleccionLista = document.getElementById("listaDeSeleccion");
-    let personajesFiltrados = seleccionLista.value;
+    // console.log('selección lista "el nodo" ', seleccionLista);
 
     document.addEventListener('change', () => {
-        let result = document.querySelectorAll(personajesFiltrados);
-        console.log(result);
-    })
-    document.getElementById("resultadoSeleccion").innerHTML = (personajesFiltrados);
+        // console.log('se hizo el change');
+        let personajesFiltrados = seleccionLista.value;
+        //Variable que pinta el resultado del filtro en pantalla
+        const resultadoFiltrado = filterPersonajes(data.results, personajesFiltrados);
+        listarPersonajes(resultadoFiltrado);
+    });
 }
 filtrarPersonajes();
 
 //Boton "portal" para ir a pantalla personajes
-let displayCharacters = document.getElementById("btnPersonajes");
-displayCharacters.addEventListener("change", () => {
-    document.home.style.display = "block";
-    document.pantallaPersonajes.style.display = "none";
-});
+
+document.getElementById("btnPersonajes").addEventListener("click", displayPersonajes);
+console.log("click");
+
+function displayPersonajes() {
+    document.getElementById("pantallaPersonajes").style.display = "none";
+    document.getElementById("pantallaInicio").style.display = "block";
+}
+
+
+
+
+
+
+
+
+
+// let displayCharacters = document.getElementById("btnPersonajes");
+// displayCharacters.addEventListener("change", () => {
+//     document.home.style.display = "block";
+//     document.pantallaPersonajes.style.display = "none";
+// });
