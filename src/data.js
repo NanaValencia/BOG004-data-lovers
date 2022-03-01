@@ -7,8 +7,8 @@ export const filterPersonajes = (arrayPersonajes, palabraClave) => {
     return estado;
 };
 
-export const ordenamientoData = (arregloPersonajes) => {
-    return arregloPersonajes.sort((a, b) => {
-        return a.name > b.name ? -1:1;
-    });
-};
+// export const ordenamientoData = (arregloPersonajes) => {
+//     return arregloPersonajes.sort((a, b) => {
+//         return a.name > b.name ? -1 : 1;
+//     });
+// };

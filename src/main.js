@@ -1,7 +1,7 @@
-import { filterPersonajes, ordenamientoData } from './data.js';
+import { filterPersonajes } from './data.js';
 import data from './data/rickandmorty/rickandmorty.js';
 
-
+//Trayendo Data de rickandmorty.js
 let dataResults = data.results
 let contenedorPersonajes = document.getElementById("contenedorPersonajes");
 
@@ -27,50 +27,27 @@ function listarPersonajes(data) {
 }
 listarPersonajes(dataResults);
 
-//Boton ir a personajes
-
-let displayCharacters = document.getElementById("btnPersonajes");
-displayCharacters.addEventListener("change",() => {
-    pantallaPersonajes.style.display = "none";
-    home.style.display = "block";
-})
-
-// let regresarHome = document.getElementById("btnHome")
-// function btnPersonajes() {
-//     document.getElementById("pantallaPersonajes").style.display = "block";
-//     document.getElementById("home").style.display = "none";
-// }
-
-// function btnHome() {
-//     document.getElementById("home").style.display = "block";
-//     document.getElementById("pantallaPersonajes").style.display = "none";
-// }
-
-// characters.addEventListener("change", btnPersonajes);
-// regresarHome.addEventListener("click", btnHome);
-
+// Console.log de filter (data.js)
 console.log(filterPersonajes(data.results, "Alive"));
 console.log(filterPersonajes(data.results, "Dead"));
 console.log(filterPersonajes(data.results, "unknown"));
 
-//Función filtro
+//Función para capturar evento filter
+function filtrarPersonajes() {
+    let seleccionLista = document.getElementById("listaDeSeleccion");
+    let personajesFiltrados = seleccionLista.value;
 
-function filtroPersonajes() {
-    let valorLista = document.getElementById("listaDeSeleccion").value;
-    const personajesFiltrados = filterPersonajes(arrayPersonajes, valorLista);
-    listarPersonajes(personajesFiltrados);
+    document.addEventListener('change', () => {
+        let result = document.querySelectorAll(personajesFiltrados);
+        console.log(result);
+    })
+    document.getElementById("resultadoSeleccion").innerHTML = (personajesFiltrados);
 }
+filtrarPersonajes();
 
-let botonBuscar = document.querySelector('#listaDeSeleccion');
-
-botonBuscar.addEventListener('change', (event) => {
-    const resultado = document.querySelector('#resultado');
+//Boton "portal" para ir a pantalla personajes
+let displayCharacters = document.getElementById("btnPersonajes");
+displayCharacters.addEventListener("change", () => {
+    document.home.style.display = "block";
+    document.pantallaPersonajes.style.display = "none";
 });
-filtroPersonajes;
-
-// const selectElement = document.querySelector('.nieve');
-
-// selectElement.addEventListener('change', (event) => {
-//     const resultado = document.querySelector('.resultado');
-//     resultado.textContent = `Te gusta el sabor ${event.target.value}`;
-// });
