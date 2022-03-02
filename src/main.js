@@ -47,7 +47,7 @@ function filtrarPersonajes() {
 }
 filtrarPersonajes();
 
-//Boton "portal" para ir a pantalla personajes
+//Boton "portal" para ir a pantalla personajes <3
 
 document.getElementById("btnPersonajes").addEventListener("click", displayPersonajes);
 console.log("click");
@@ -56,17 +56,3 @@ function displayPersonajes() {
     document.getElementById("pantallaPersonajes").style.display = "none";
     document.getElementById("pantallaInicio").style.display = "block";
 }
-
-
-
-
-
-
-
-
-
-// let displayCharacters = document.getElementById("btnPersonajes");
-// displayCharacters.addEventListener("change", () => {
-//     document.home.style.display = "block";
-//     document.pantallaPersonajes.style.display = "none";
-// });
