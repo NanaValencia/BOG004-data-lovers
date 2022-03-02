@@ -1,9 +1,11 @@
-import { filterPersonajes } from './data.js';
+import { filterPersonajes, ordenamientoDataAZ, ordenamientoDataZA } from './data.js';
 import data from './data/rickandmorty/rickandmorty.js';
 
 //Trayendo Data de rickandmorty.js
 let dataResults = data.results
 let contenedorPersonajes = document.getElementById("contenedorPersonajes");
+console.log(ordenamientoDataAZ(dataResults));
+console.log(ordenamientoDataZA(dataResults));
 
 function listarPersonajes(data) {
     let grupoPersonajes = "";
@@ -48,9 +50,6 @@ function filtrarPersonajes() {
 filtrarPersonajes();
 
 //Boton "portal" para ir a pantalla personajes <3
-
-
-
 let btnPersonajes = document.getElementById("btnPersonajes");
 
 function displayPersonajes() {
