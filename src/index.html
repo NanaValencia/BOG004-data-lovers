@@ -56,29 +56,30 @@
                 <img src="./img/svg/fblogo.svg" alt="facebook" />
             </section>
 
-            <!-- Historia de usuario Personajes -->
-            <div id="pantallaPersonajes">
-                <section id="portalHomePersonajes">
-                    <img src="./img/svg/logo.svg" class="logo" alt="logo RM" />
-                    <a id="btnHome"><img src="./img/svg/portal.svg" alt="portal" /></a>
-                    <h1 id="tituloPersonajes">Personajes de la serie</h1>
-                </section>
-                <label>Filtra personajes por estatus
-              <select name="status" id="listaDeSeleccion">
-                <option id="vivo" value="Alive">Vivos</option>
-                <option id="muerto" value="Dead">Muertos</option>
-                <option id="desconocido" value="unknown">Desconocidos</option>
-              </select>
-            </label>
-                <section id="contenedorPersonajes">
-                    <a id="inicioPersonajes"><img src="./img/svg/portal.svg" alt="inicio" /></a>
-                </section>
-            </div>
             <!--Enlace con archivo JS-->
             <div id="root"></div>
             <script src="main.js" type="module"></script>
         </main>
-        </div>
+    </section>
+
+    <!-- Historia de usuario Personajes -->
+    <section id="pantallaPersonajes" style="display: none;">
+        <!--CAMBIO-->
+        <section id="portalHomePersonajes">
+            <img src="./img/svg/logo.svg" class="logo" alt="logo RM" />
+            <a id="btnHome"><img src="./img/svg/portal.svg" alt="portal" /></a>
+            <h1 id="tituloPersonajes">Personajes de la serie</h1>
+        </section>
+        <label>Filtra personajes por estatus
+        <select name="status" id="listaDeSeleccion">
+            <option id="vivo" value="Alive">Vivos</option>
+            <option id="muerto" value="Dead">Muertos</option>
+            <option id="desconocido" value="unknown">Desconocidos</option>
+        </select>
+        </label>
+        <section id="contenedorPersonajes">
+            <a id="inicioPersonajes"><img src="./img/svg/portal.svg" alt="inicio" /></a>
+        </section>
     </section>
 </body>
 <footer>

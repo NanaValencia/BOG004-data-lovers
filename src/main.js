@@ -49,10 +49,13 @@ filtrarPersonajes();
 
 //Boton "portal" para ir a pantalla personajes <3
 
-document.getElementById("btnPersonajes").addEventListener("click", displayPersonajes);
-console.log("click");
+
+
+let btnPersonajes = document.getElementById("btnPersonajes");
 
 function displayPersonajes() {
-    document.getElementById("pantallaPersonajes").style.display = "none";
-    document.getElementById("pantallaInicio").style.display = "block";
+    document.getElementById("pantallaPersonajes").style.display = "block";
+    document.getElementById("home").style.display = "none";
 }
+
+btnPersonajes.addEventListener("click", displayPersonajes);
