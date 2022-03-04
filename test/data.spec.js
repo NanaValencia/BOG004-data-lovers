@@ -1,4 +1,5 @@
-import { filterPersonajes, ordenamientoDataAZ } from '../src/data.js';
+import { describe, it } from 'eslint/lib/rule-tester/rule-tester';
+import { filterPersonajes, ordenamientoDataAZ, ordenamientoDataZA, estadisticaVivos } from '../src/data.js';
 
 const dataRmTest = [{
         "name": "Abadango Cluster Princess",
@@ -80,3 +81,16 @@ describe('ordenamientoDataAZ', () => {
         expect(resultadoAZ[0].name).toEqual("Abadango Cluster Princess");
     });
 });
+
+describe('ordenamientoDataZA', () => {
+  it('ordena dataRmTest de ZA',() =>{
+    const resultadoZA = ordenamientoDataZA(dataRmTest);
+    expect(resultadoZA[0].name).toEqual("Rick Sanchez");
+  });
+});
+
+describe('estadisticaVivos', () => {
+  it('Revela el porcentaje de personajes vivos', () => {
+    expect(estadisticaVivos(dataRmTest, "Alive").toEqual[4]);
+  });
+})
