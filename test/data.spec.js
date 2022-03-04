@@ -1,159 +1,82 @@
-import { filterPersonajes } from '../src/data.js';
+import { filterPersonajes, ordenamientoDataAZ } from '../src/data.js';
 
-const dataRmTest = [
-  {
-    "name": "Rick Sanchez",
-    "status": "Alive",
-    "species": "Human",
-    "origin": {
-      "name": "Earth (C-137)"
+const dataRmTest = [{
+        "name": "Abadango Cluster Princess",
+        "status": "Alive",
+        "species": "Alien",
+        "location": {
+            "name": "Abadango"
+        },
     },
-    "location": {
-      "name": "Earth (Replacement Dimension)"
+    {
+        "name": "Rick Sanchez",
+        "status": "Alive",
+        "species": "Human",
+        "location": {
+            "name": "Earth (Replacement Dimension)"
+        },
     },
-  },
-  {
-    "name": "Beth Smith",
-    "status": "Alive",
-    "species": "Human",
-    "origin": {
-      "name": "Earth (Replacement Dimension)"
+    {
+        "name": "Beth Smith",
+        "status": "Alive",
+        "species": "Human",
+        "location": {
+            "name": "Earth (Replacement Dimension)"
+        },
     },
-    "location": {
-      "name": "Earth (Replacement Dimension)"
+    {
+        "name": "Benjamin",
+        "status": "Alive",
+        "species": "Poopybutthole",
+        "location": {
+            "name": "Interdimensional Cable"
+        },
     },
-  },
-  {
-    "name": "Abadango Cluster Princess",
-    "status": "Alive",
-    "species": "Alien",
-    "origin": {
-      "name": "Abadango"
-    },
-    "location": {
-      "name": "Abadango"
-    },
-  },
-  {
-    "name": "Adjudicator Rick",
-    "status": "Dead",
-    "species": "Human",
-    "origin": {
-      "name": "unknown"
-    },
-    "location": {
-      "name": "Citadel of Ricks"
-    },
-  },
-  {
-    "name": "Aqua Morty",
-    "status": "unknown",
-    "species": "Humanoid",
-    "origin": {
-      "name": "unknown"
-    },
-    "location": {
-      "name": "Citadel of Ricks"
-    },
-  },
-  {
-    "name": "Benjamin",
-    "status": "Alive",
-    "species": "Poopybutthole",
-    "origin": {
-      "name": "unknown",
-    },
-    "location": {
-      "name": "Interdimensional Cable"
-    },
-  },
 ]
 
-const dataFilterTest = [
-  {
-    "name": "Bepisian",
-    "status": "Alive",
-    "species": "Alien",
-    "origin": {
-      "name": "Bepis 9"
+const dataFilterTest = [{
+        "name": "Abadango Cluster Princess",
+        "status": "Alive",
+        "species": "Alien",
+        "location": {
+            "name": "Abadango"
+        },
     },
-    "location": {
-      "name": "Bepis 9"
+    {
+        "name": "Rick Sanchez",
+        "status": "Alive",
+        "species": "Human",
+        "location": {
+            "name": "Earth (Replacement Dimension)"
+        },
     },
-  },
-  {
-    "name": "Body Guard Morty",
-    "status": "Dead",
-    "species": "Human",
-    "origin": {
-      "name": "unknown",
+    {
+        "name": "Beth Smith",
+        "status": "Alive",
+        "species": "Human",
+        "location": {
+            "name": "Earth (Replacement Dimension)"
+        },
     },
-    "location": {
-      "name": "Citadel of Ricks",
+    {
+        "name": "Benjamin",
+        "status": "Alive",
+        "species": "Poopybutthole",
+        "location": {
+            "name": "Interdimensional Cable"
+        },
     },
-  },
-  {
-    "name": "Birdperson",
-    "status": "Dead",
-    "species": "Alien",
-    "origin": {
-      "name": "Bird World",
-    },
-    "location": {
-      "name": "Planet Squanch",
-    },
-  },
-  {
-    "name": "Blue Shirt Morty",
-    "status": "unknown",
-    "species": "Human",
-    "origin": {
-      "name": "unknown",
-    },
-    "location": {
-      "name": "Citadel of Ricks",
-    },
-  },
-  {
-    "name": "Bobby Moynihan",
-    "status": "Alive",
-    "species": "Human",
-    "origin": {
-      "name": "unknown",
-    },
-    "location": {
-      "name": "Interdimensional Cable",
-    },
-  },
-  {
-    "name": "Goddess Beth",
-    "status": "unknown",
-    "species": "Mytholog",
-    "origin": {
-      "name": "Nuptia 4",
-    },
-    "location": {
-      "name": "Nuptia 4",
-    },
-  },
 ]
 
 describe('filterPersonajes', () => {
-  it('is a function', () => {
-    expect(typeof filterPersonajes).toBe('function');
-  });
-
-  it('returns `estado`', () => {
-    expect(filterPersonajes(dataRmTest, "Alive")).toEqual(dataFilterTest);
-  });
+    it('filtra dataRmTest dejando solamente los alive', () => {
+        expect(filterPersonajes(dataRmTest, "Alive")).toEqual(dataFilterTest);
+    });
 });
 
 describe('ordenamientoDataAZ', () => {
-  it('is a function', () => {
-    expect(typeof ordenamientoDataAZ).toBe('function');
-  });
-
-  it('returns `sortedPersonajes`', () => {
-    expect(sortedPersonajes(dataRmTest, "Abadango Cluster Princess")).toEqual(dataFilterTest);
-  });
+    it('ordena dataRmTest de AZ ', () => {
+        const resultadoAZ = ordenamientoDataAZ(dataRmTest);
+        expect(resultadoAZ[0].name).toEqual("Abadango Cluster Princess");
+    });
 });
