@@ -11,7 +11,8 @@ De acuerdo a las historias de usuario que construimos a partir de conversaciones
 5. Yo como fan de la serie RM quiero un filtro que ordene los episodios desde el último al primero para estar actualizado con el show.
 
 A partir de estas HU creamos algunos sketchs a mano de cómo imaginabamos que nuestro proyecto cumpliría con los requerimientos del usuario.
-https://github.com/NanaValencia/BOG004-data-lovers/blob/madre-hija/src/img/prototipo1.jpg
+
+[Home](https://github.com/NanaValencia/BOG004-data-lovers/blob/madre-hija/src/img/prototipo1.jpg)
 https://github.com/NanaValencia/BOG004-data-lovers/blob/madre-hija/src/img/prototipo2.jpg
 https://github.com/NanaValencia/BOG004-data-lovers/blob/madre-hija/src/img/prototipo3.jpg
 https://github.com/NanaValencia/BOG004-data-lovers/blob/madre-hija/src/img/prototipo4.jpeg
