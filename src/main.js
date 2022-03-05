@@ -1,12 +1,12 @@
-import { filterPersonajes, ordenamientoDataAZ, ordenamientoDataZA, estadisticaVivos } from './data.js';
+import { filterPersonajes, ordenamientoDataAZ, ordenamientoDataZA } from './data.js';
 import data from './data/rickandmorty/rickandmorty.js';
 
 //Trayendo Data de rickandmorty.js
 let dataResults = data.results
 let contenedorPersonajes = document.getElementById("contenedorPersonajes");
-console.log(ordenamientoDataAZ(dataResults));
-console.log(ordenamientoDataZA(dataResults));
-console.log(estadisticaVivos(dataResults));
+// console.log(ordenamientoDataAZ(dataResults));
+// console.log(ordenamientoDataZA(dataResults));
+// console.log(estadisticaVivos(dataResults));
 
 function listarPersonajes(data) {
     let grupoPersonajes = "";
@@ -30,11 +30,6 @@ function listarPersonajes(data) {
 }
 listarPersonajes(dataResults);
 
-// Console.log de filter (data.js)
-// console.log(filterPersonajes(data.results, "Alive"));
-// console.log(filterPersonajes(data.results, "Dead"));
-// console.log(filterPersonajes(data.results, "unknown"));
-
 //Función para capturar evento filter
 function filtrarPersonajes() {
     let seleccionLista = document.getElementById("listaDeSeleccion");
@@ -44,14 +39,33 @@ function filtrarPersonajes() {
         // console.log('se hizo el change');
         let personajesFiltrados = seleccionLista.value;
         //Variable que pinta el resultado del filtro en pantalla
-        const resultadoFiltrado = filterPersonajes(data.results, personajesFiltrados);
+        const resultadoFiltrado = filterPersonajes(dataResults, personajesFiltrados);
         listarPersonajes(resultadoFiltrado);
     });
 }
 filtrarPersonajes();
 
-//Boton "portal" para ir a pantalla personajes <3
-let btnPersonajes = document.getElementById("btnPersonajes");
+//Funión para capturar evento de ordenamiento AZ
+function ordenarPersonajesAZ() {
+    let btnAZ = document.getElementById("btnAZ").addEventListener('click', function() {
+        let ordenador = ordenamientoDataAZ(dataResults, btnAZ);
+        listarPersonajes(ordenador);
+    });
+}
+ordenarPersonajesAZ()
+
+//Funión para capturar evento de ordenamiento ZA
+function ordenarPersonajesZA() {
+    let btnZA = document.getElementById("btnZA").addEventListener('click', function() {
+        let ordenador = ordenamientoDataZA(dataResults, btnZA);
+        listarPersonajes(ordenador);
+    });
+}
+ordenarPersonajesZA()
+
+
+//Boton "portal" para ir a pantalla Personajes
+let btnPersonajes = document.getElementById("verPersonajes");
 
 function displayPersonajes() {
     document.getElementById("pantallaPersonajes").style.display = "block";
@@ -59,3 +73,13 @@ function displayPersonajes() {
 }
 
 btnPersonajes.addEventListener("click", displayPersonajes);
+
+//Botón portal para ir a pantalla Home
+let btnHome = document.getElementById("btnHome");
+
+function backHome() {
+    document.getElementById("home").style.display = "block";
+    document.getElementById("pantallaPersonajes").style.display = "none";
+}
+
+btnHome.addEventListener('click', backHome);

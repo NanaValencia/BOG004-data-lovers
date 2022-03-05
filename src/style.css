@@ -1,64 +1,57 @@
-@media screen and (min-width: 768px){
-body {
-    background-image: url(./img/svg/fondo1\ 2.svg);
-    background-size: 100%;
-    margin: 0%;
-    padding: 0%;
-}
-
-/* Encabezado */
-
-.logo {
-    display: block;
-    margin: auto;
-}
-
-#titulo {
-    text-align: center;
-    padding-top: 4%;
-    font-style: normal;
-    font-family: Arial, Helvetica, sans-serif;
-    font-size: 200%;
-    color: aliceblue;
-}
-
-#bienvenida {
-    width: 50%;
-    display: block;
-    margin: auto;
-    padding: 2%;
-    text-align: center;
-    font-style: normal;
-    font-family: Arial, Helvetica, sans-serif;
-    font-size: 80%;
-    color: aliceblue
-}
-a {
-    cursor: pointer;
-}
-
-/* Contenedor Home */
-
-.pantallaHome {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    width: 100%;
-    justify-content: center;
-}
-
-.fotosPortales {
-   display: grid;
-   grid-template-columns: 1fr 1fr;
-   justify-content: center;
-   margin: auto;
-   padding: 5%;
-   width: 20%;
-}
-
-.fotosPortales img {
-    border-radius: 3%;
-}
-/* .ligaPortales {
+@media screen and (min-width: 768px) {
+    * {
+        font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    }
+    body {
+        background-image: url(./img/svg/fondo1\ 2.svg);
+        background-size: 100%;
+        margin: 0%;
+        padding: 0%;
+    }
+    /* Encabezado */
+    .logo {
+        display: block;
+        margin: auto;
+    }
+    #titulo {
+        text-align: center;
+        padding-top: 4%;
+        font-style: normal;
+        font-size: 200%;
+        color: aliceblue;
+    }
+    #bienvenida {
+        width: 50%;
+        display: block;
+        margin: auto;
+        padding: 2%;
+        text-align: center;
+        font-style: normal;
+        font-size: 100%;
+        color: aliceblue
+    }
+    a {
+        cursor: pointer;
+    }
+    /* Contenedor Home */
+    .pantallaHome {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        width: 100%;
+        justify-content: center;
+    }
+    .fotosPortales {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        justify-content: center;
+        margin: auto;
+        padding: 5%;
+        width: 20%;
+    }
+    .fotosPortales img {
+        border-radius: 3%;
+    }
+    /* .ligaPortales {
     display: block;
     float: left;
     justify-items: center;
@@ -67,7 +60,7 @@ a {
     padding: 10%;
 
 } */
-/* .tituloBoton {
+    /* .tituloBoton {
     display: grid;
     grid-template-columns: 1fr 1fr;
     margin: auto;
@@ -78,91 +71,110 @@ a {
     font-size: 80%;
     color: aliceblue
 } */
-
-#contenedorLiga {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    justify-items: center;
-    text-align: center;
-    width: 40%;
-    padding: auto;
-    margin: auto;
-    font-style: normal;
-    font-family: Arial, Helvetica, sans-serif;
-    font-size: 80%;
-    color: aliceblue;
-}
-
-/* Historia de usuario personajes */
-
-#tituloPersonajes {
-    text-align: center;
-    font-style: normal;
-    font-family: Arial, Helvetica, sans-serif;
-    font-size: 200%;
-    color: aliceblue;
-}
-
-.ligaPortales {
-    display: block;
-    
-}
-.cards {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    margin-left: 4%;
-    margin-right: 4%;
-    background-color: grey;
-    width: 60%;
-    padding: 1em;
-    margin: 2%;
-    border-radius: 2%;
-    font-family: Arial, Helvetica, sans-serif;
-    font-size: medium;
-    color: rgb(8, 8, 8);
-}
-
-.fotoPersonaje img {
-    margin: 5%;
-    width: 100%;
-}
-
-.datos {
-    display: block;
-    flex-direction: column;
-    text-align: left;
-    margin: 5%;
-    padding: 3%;
-}
-
-#redes {
-    background-color: grey;
-    border-radius: 2%;
-    display: inline-block;
-    text-align: center;
-    margin-left: 95%;
-}
-
-#contenedorPersonajes {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    justify-content: center;
-    align-items: center;
-}
-
-footer {
-    background-color: grey;
-    width: 100%;
-    display: block;
-    margin: auto;
-    padding: 0.5%;
-    text-align: center;
-    font-style: normal;
-    font-family: Arial, Helvetica, sans-serif;
-    font-size: 100%;
-    color: rgb(5, 5, 5)
-}
-
+    #contenedorLiga {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        justify-items: center;
+        text-align: center;
+        width: 40%;
+        padding: auto;
+        margin: auto;
+        font-style: normal;
+        font-size: 100%;
+        color: aliceblue;
+    }
+    /* Historia de usuario personajes */
+    #btnHome {
+        margin-left: 5%;
+    }
+    #tituloPersonajes {
+        text-align: center;
+        font-style: normal;
+        font-size: 200%;
+        padding: 2%;
+        color: aliceblue;
+    }
+    #tituloFiltro {
+        font-style: normal;
+        text-align: justify;
+        text-decoration: none;
+        padding: 15px 32px;
+        font-size: 16px;
+        color: white;
+    }
+    #listaDeSeleccion {
+        background-color: #798379;
+        color: white;
+        align-items: center;
+        padding: 15px 32px;
+        text-align: justify;
+        text-decoration: none;
+        display: inline-block;
+        font-size: 16px;
+    }
+    button {
+        background-color: #4CAF50;
+        border-radius: 10%;
+        color: white;
+        align-items: center;
+        padding: 15px 32px;
+        text-align: center;
+        text-decoration: none;
+        display: inline-block;
+        font-size: 16px;
+    }
+    .ligaPortales {
+        display: block;
+    }
+    .cards {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        margin-left: 4%;
+        margin-right: 4%;
+        background-color: grey;
+        width: 60%;
+        padding: 1em;
+        margin: 2%;
+        border-radius: 2%;
+        font-size: medium;
+        color: rgb(8, 8, 8);
+    }
+    .fotoPersonaje img {
+        margin: 5%;
+        width: 100%;
+    }
+    .datos {
+        display: block;
+        flex-direction: column;
+        text-align: left;
+        margin: 5%;
+        padding: 3%;
+    }
+    #redes {
+        background-color: grey;
+        border-radius: 2%;
+        display: inline-block;
+        text-align: center;
+        margin-left: 95%;
+    }
+    #contenedorPersonajes {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        justify-content: center;
+        align-items: center;
+        padding: 8%;
+    }
+    footer {
+        background-color: grey;
+        width: 100%;
+        display: block;
+        margin: auto;
+        padding: 0.5%;
+        text-align: center;
+        font-style: normal;
+        font-size: 100%;
+        color: rgb(5, 5, 5)
+    }
 }
