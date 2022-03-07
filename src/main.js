@@ -1,12 +1,15 @@
-import { filterPersonajes, ordenamientoDataAZ, ordenamientoDataZA } from './data.js';
+import { filterPersonajes, ordenamientoDataAZ, ordenamientoDataZA, estadisticaVivos, estadisticaMuertos, estadisticaDesconocidos, estadisticaHuman, estadisticaAlien, estadisticaHumanoid } from './data.js';
 import data from './data/rickandmorty/rickandmorty.js';
 
 //Trayendo Data de rickandmorty.js
 let dataResults = data.results
 let contenedorPersonajes = document.getElementById("contenedorPersonajes");
-// console.log(ordenamientoDataAZ(dataResults));
-// console.log(ordenamientoDataZA(dataResults));
-// console.log(estadisticaVivos(dataResults));
+console.log(estadisticaVivos(dataResults));
+console.log(estadisticaMuertos(dataResults));
+console.log(estadisticaDesconocidos(dataResults));
+console.log(estadisticaHuman(dataResults));
+console.log(estadisticaAlien(dataResults));
+console.log(estadisticaHumanoid(dataResults));
 
 function listarPersonajes(data) {
     let grupoPersonajes = "";
