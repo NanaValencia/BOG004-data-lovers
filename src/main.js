@@ -1,10 +1,10 @@
 import { filterPersonajes, ordenamientoDataAZ, ordenamientoDataZA, estadisticaVivos, estadisticaMuertos, estadisticaDesconocidos, estadisticaHuman, estadisticaAlien, estadisticaHumanoid } from './data.js';
 import data from './data/rickandmorty/rickandmorty.js';
 
-//Trayendo Data de rickandmorty.js
+//Trayendo Data de rickandmorty.js para contenedor personajes
 let dataResults = data.results
 let contenedorPersonajes = document.getElementById("contenedorPersonajes");
-console.log(estadisticaVivos(dataResults));
+// console.log(estadisticaVivos(dataResults));
 console.log(estadisticaMuertos(dataResults));
 console.log(estadisticaDesconocidos(dataResults));
 console.log(estadisticaHuman(dataResults));
@@ -46,7 +46,16 @@ function filtrarPersonajes() {
         listarPersonajes(resultadoFiltrado);
     });
 }
-filtrarPersonajes();
+filtrarPersonajes()
+
+// Pintando estadísticas en pantalla curiosidades
+function mostrarEstadisticas() {
+    let vivos = document.getElementById("resultadoVivos");
+    let resultado = estadisticaVivos(dataResults, vivos);
+    resultado;
+}
+mostrarEstadisticas()
+
 
 //Funión para capturar evento de ordenamiento AZ
 function ordenarPersonajesAZ() {
@@ -78,11 +87,31 @@ function displayPersonajes() {
 btnPersonajes.addEventListener("click", displayPersonajes);
 
 //Botón portal para ir a pantalla Home
-let btnHome = document.getElementById("btnHome");
+let btnHomePersonajes = document.getElementById("btnHomePersonajes");
 
-function backHome() {
+function backHomePersonajes() {
     document.getElementById("home").style.display = "block";
     document.getElementById("pantallaPersonajes").style.display = "none";
 }
 
-btnHome.addEventListener('click', backHome);
+btnHomePersonajes.addEventListener('click', backHomePersonajes);
+
+//Boton "portal" para ir a pantalla Curiosidades
+let btnCuriosidades = document.getElementById("verCuriosidades");
+
+function displayCuriosidades() {
+    document.getElementById("pantallaCuriosidades").style.display = "block";
+    document.getElementById("home").style.display = "none";
+}
+
+btnCuriosidades.addEventListener("click", displayCuriosidades);
+
+//Botón portal para ir a pantalla home
+let btnHomeCuriosidades = document.getElementById("btnHomeCuriosidades");
+
+function backHomeCuriosidades() {
+    document.getElementById("home").style.display = "block";
+    document.getElementById("pantallaCuriosidades").style.display = "none";
+}
+
+btnHomeCuriosidades.addEventListener('click', backHomeCuriosidades);

@@ -28,7 +28,6 @@ export const estadisticaVivos = (arrayPersonajes) => {
             listaVivos.push(personaje);
         }
     });
-    console.log(listaVivos);
 
     let sumaVivos = listaVivos.length
     let promedio = sumaVivos / arrayPersonajes.length * 100;
