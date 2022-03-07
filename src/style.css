@@ -146,9 +146,39 @@
         align-items: center;
         padding: 8%;
     }
-    #resultadoVivos {
-        background-color: aliceblue;
+
+    /* Historia de usuario Estadística */
+
+    .contenedorEstadisticas {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        justify-content: center;
+        justify-items: center;
+        padding: 1%;
+        margin: 2%;
     }
+    .textoCards {
+        position: absolute;
+        text-align: center;
+        font-size: 100%;
+        font-style: normal;
+        color:rgb(13, 13, 14);
+        top: 10%;
+        left: 10%;
+    }
+
+    .cards{
+        position: relative;
+        text-align: center;
+        top: 40%;
+        left: 35%;
+        transform: translate(-50%, -50%);
+        margin: 3%;
+        padding: 0;
+        width: auto;
+    }
+
+    
     footer {
         background-color: grey;
         width: 100%;
