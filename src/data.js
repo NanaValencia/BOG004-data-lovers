@@ -110,8 +110,3 @@ export const estadisticaHumanoid = (arrayPersonajes) => {
     let promedioRedondeado = Math.round((promedio) * 100) / 100;
     return promedioRedondeado;
 }
-
-// export const ordenamientoData = (arregloPersonajes, especie) => {
-//     const arrayEspecie = arregloPersonajes.filter(personaje => personaje.species === especie);
-//     return arrayEspecie;
-// };
