@@ -11,10 +11,9 @@ De acuerdo a las historias de usuario que construimos a partir de conversaciones
 
 A partir de estas HU creamos algunos sketchs a mano de cómo imaginabamos que nuestro proyecto cumpliría con los requerimientos del usuario.
 
-https://github.com/NanaValencia/BOG004-data-lovers/blob/madre-hija/src/img/prototipo1.jpg
-https://github.com/NanaValencia/BOG004-data-lovers/blob/madre-hija/src/img/prototipo2.jpg
-https://github.com/NanaValencia/BOG004-data-lovers/blob/madre-hija/src/img/prototipo3.jpg
-https://github.com/NanaValencia/BOG004-data-lovers/blob/madre-hija/src/img/prototipo4.jpg
+https://github.com/NanaValencia/BOG004-data-lovers/blob/madre-hija/src/img/WhatsApp%20Image%202022-03-04%20at%205.45.34%20PM%20(1).jpeg
+https://github.com/NanaValencia/BOG004-data-lovers/blob/madre-hija/src/img/WhatsApp%20Image%202022-03-04%20at%205.45.34%20PM%20(2).jpeg
+https://github.com/NanaValencia/BOG004-data-lovers/blob/madre-hija/src/img/WhatsApp%20Image%202022-03-04%20at%205.45.34%20PM.jpeg
 
 Posteriormente revisamos los recursos que disponíamos para crear este proyecto, los objetivos de aprendizaje que esperabamos lograr, y realizamos unos test con los posibles usuarios para determinar los temas mas importantes a abordar. Estos test de usabilidad nos arrojaron los siguientes datos:
 1. Los usuarios querían una página fácil de navegar, donde todos los portales estuvieran nombrados y el recorrido fuera muy intuitivo.
