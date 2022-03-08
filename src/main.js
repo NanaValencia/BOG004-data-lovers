@@ -4,12 +4,6 @@ import data from './data/rickandmorty/rickandmorty.js';
 //Trayendo Data de rickandmorty.js para contenedor personajes
 let dataResults = data.results
 let contenedorPersonajes = document.getElementById("contenedorPersonajes");
-// console.log(estadisticaVivos(dataResults));
-console.log(estadisticaMuertos(dataResults));
-console.log(estadisticaDesconocidos(dataResults));
-console.log(estadisticaHuman(dataResults));
-console.log(estadisticaAlien(dataResults));
-console.log(estadisticaHumanoid(dataResults));
 
 function listarPersonajes(data) {
     let grupoPersonajes = "";
@@ -49,12 +43,47 @@ function filtrarPersonajes() {
 filtrarPersonajes()
 
 // Pintando estadísticas en pantalla curiosidades
-function mostrarEstadisticas() {
+function mostrarEstadisticasVivos() {
     let vivos = document.getElementById("resultadoVivos");
-    let resultado = estadisticaVivos(dataResults, vivos);
-    resultado;
+    let resultado = estadisticaVivos(dataResults);
+    vivos.innerHTML += resultado + '%'
 }
-mostrarEstadisticas()
+mostrarEstadisticasVivos()
+
+function mostrarEstadisticasMuertos() {
+    let muertos = document.getElementById("resultadoMuertos");
+    let resultado = estadisticaMuertos(dataResults);
+    muertos.innerHTML = resultado
+}
+mostrarEstadisticasMuertos()
+
+function mostrarEstadisticasDesconocidos() {
+    let desconocidos = document.getElementById("resultadoDesconocidos");
+    let resultado = estadisticaDesconocidos(dataResults);
+    desconocidos.innerHTML = resultado
+}
+mostrarEstadisticasDesconocidos()
+
+function mostrarEstadisticasHumanos() {
+    let humanos = document.getElementById("resultadoHumanos");
+    let resultado = estadisticaHuman(dataResults);
+    humanos.innerHTML = resultado
+}
+mostrarEstadisticasHumanos()
+
+function mostrarEstadisticasAliens() {
+    let aliens = document.getElementById("resultadoAliens");
+    let resultado = estadisticaAlien(dataResults);
+    aliens.innerHTML = resultado
+}
+mostrarEstadisticasAliens()
+
+function mostrarEstadisticasHumanoides() {
+    let humaniodes = document.getElementById("resultadoHumanoides");
+    let resultado = estadisticaHumanoid(dataResults);
+    humaniodes.innerHTML = resultado
+}
+mostrarEstadisticasHumanoides()
 
 
 //Funión para capturar evento de ordenamiento AZ

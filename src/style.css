@@ -48,8 +48,21 @@
         padding: 5%;
         width: 20%;
     }
+    .fotosPortales img:hover {
+        transform: scale(1.3);
+        box-shadow: 0px 0px 15px 15px rgb(189, 188, 188);
+    }
     .fotosPortales img {
         border-radius: 3%;
+    }
+    .txtFotosPortales {
+        display: flex;
+        padding: 40%;
+        padding-top: 0%;
+        padding-bottom: 5%;
+        text-align: center;
+        font-size: 100%;
+        color: aliceblue
     }
     #contenedorLiga {
         display: flex;
@@ -58,7 +71,8 @@
         justify-items: center;
         text-align: center;
         width: 40%;
-        padding: auto;
+        padding: 6%;
+        padding-bottom: 3%;
         margin: auto;
         font-style: normal;
         font-size: 100%;
@@ -113,7 +127,7 @@
         justify-content: center;
         margin-left: 4%;
         margin-right: 4%;
-        background-color: grey;
+        background-color: fuchsia;
         width: 60%;
         padding: 1em;
         margin: 2%;
@@ -146,9 +160,14 @@
         align-items: center;
         padding: 8%;
     }
-
     /* Historia de usuario Estadística */
-
+    #tituloCuriosidades {
+        text-align: center;
+        font-style: normal;
+        font-size: 200%;
+        padding: 2%;
+        color: aliceblue;
+    }
     .contenedorEstadisticas {
         display: grid;
         grid-template-columns: 1fr 1fr 1fr;
@@ -158,16 +177,16 @@
         margin: 2%;
     }
     .textoCards {
+        display: flex;
         position: absolute;
         text-align: center;
         font-size: 100%;
         font-style: normal;
-        color:rgb(13, 13, 14);
+        color: rgb(13, 13, 14);
         top: 10%;
         left: 5%;
     }
-
-    .cards{
+    .cards {
         position: relative;
         text-align: center;
         top: 40%;
@@ -177,8 +196,6 @@
         padding: 0;
         width: auto;
     }
-
-    
     footer {
         background-color: grey;
         width: 100%;
@@ -190,4 +207,9 @@
         font-size: 100%;
         color: rgb(5, 5, 5)
     }
+}
+
+.prueba {
+    color: blue;
+    font-size: large;
 }
