@@ -42,7 +42,6 @@ export const estadisticaMuertos = (arregloPersonajes) => {
             listaMuertos.push(personaje);
         }
     });
-    console.log(listaMuertos);
 
     let sumaMuertos = listaMuertos.length
     let promedio = sumaMuertos / arregloPersonajes.length * 100;
@@ -57,7 +56,6 @@ export const estadisticaDesconocidos = (arrayPersonajes) => {
             listaDesconocidos.push(personaje);
         }
     });
-    console.log(listaDesconocidos);
 
     let sumaDesconocidos = listaDesconocidos.length
     let promedio = sumaDesconocidos / arrayPersonajes.length * 100;
@@ -72,7 +70,6 @@ export const estadisticaHuman = (arrayPersonajes) => {
             listaHuman.push(personaje);
         }
     });
-    console.log(listaHuman);
 
     let sumaHuman = listaHuman.length
     let promedio = sumaHuman / arrayPersonajes.length * 100;
@@ -87,7 +84,6 @@ export const estadisticaAlien = (arrayPersonajes) => {
             listaAlien.push(personaje);
         }
     });
-    console.log(listaAlien);
 
     let sumaAlien = listaAlien.length
     let promedio = sumaAlien / arrayPersonajes.length * 100;
@@ -102,7 +98,6 @@ export const estadisticaHumanoid = (arrayPersonajes) => {
             listaHumanoid.push(personaje);
         }
     });
-    console.log(listaHumanoid);
 
     let sumaHumanoid = listaHumanoid.length
     let promedio = sumaHumanoid / arrayPersonajes.length * 100;

@@ -185,9 +185,12 @@
         text-align: center;
         font-size: 100%;
         font-style: normal;
+        margin: 10%;
+        padding: 5%;
         color: rgb(13, 13, 14);
         top: 10%;
-        left: 5%;
+        left: 4%;
+        right: 4%;
     }
     .cardsCuriosidades {
         position: relative;
@@ -195,8 +198,8 @@
         top: 40%;
         left: 40%;
         transform: translate(-50%, -50%);
-        margin: 3%;
-        padding: 0;
+        margin: 6%;
+        padding: 6%;
         width: auto;
     }
     footer {
@@ -210,9 +213,4 @@
         font-size: 100%;
         color: rgb(5, 5, 5)
     }
-}
-
-.prueba {
-    color: blue;
-    font-size: large;
 }
