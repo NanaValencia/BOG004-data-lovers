@@ -53,35 +53,35 @@ mostrarEstadisticasVivos()
 function mostrarEstadisticasMuertos() {
     let muertos = document.getElementById("resultadoMuertos");
     let resultado = estadisticaMuertos(dataResults);
-    muertos.innerHTML = resultado
+    muertos.innerHTML += resultado + '%'
 }
 mostrarEstadisticasMuertos()
 
 function mostrarEstadisticasDesconocidos() {
     let desconocidos = document.getElementById("resultadoDesconocidos");
     let resultado = estadisticaDesconocidos(dataResults);
-    desconocidos.innerHTML = resultado
+    desconocidos.innerHTML += resultado + '%'
 }
 mostrarEstadisticasDesconocidos()
 
 function mostrarEstadisticasHumanos() {
     let humanos = document.getElementById("resultadoHumanos");
     let resultado = estadisticaHuman(dataResults);
-    humanos.innerHTML = resultado
+    humanos.innerHTML += resultado + '%'
 }
 mostrarEstadisticasHumanos()
 
 function mostrarEstadisticasAliens() {
     let aliens = document.getElementById("resultadoAliens");
     let resultado = estadisticaAlien(dataResults);
-    aliens.innerHTML = resultado
+    aliens.innerHTML += resultado + '%'
 }
 mostrarEstadisticasAliens()
 
 function mostrarEstadisticasHumanoides() {
     let humaniodes = document.getElementById("resultadoHumanoides");
     let resultado = estadisticaHumanoid(dataResults);
-    humaniodes.innerHTML = resultado
+    humaniodes.innerHTML += resultado + '%'
 }
 mostrarEstadisticasHumanoides()
 

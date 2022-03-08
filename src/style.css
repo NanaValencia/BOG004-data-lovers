@@ -127,7 +127,7 @@
         justify-content: center;
         margin-left: 4%;
         margin-right: 4%;
-        background-color: fuchsia;
+        background-color: grey;
         width: 60%;
         padding: 1em;
         margin: 2%;
@@ -161,6 +161,9 @@
         padding: 8%;
     }
     /* Historia de usuario Estadística */
+    #btnHomeCuriosidades {
+        margin-left: 5%;
+    }
     #tituloCuriosidades {
         text-align: center;
         font-style: normal;
@@ -186,7 +189,7 @@
         top: 10%;
         left: 5%;
     }
-    .cards {
+    .cardsCuriosidades {
         position: relative;
         text-align: center;
         top: 40%;
